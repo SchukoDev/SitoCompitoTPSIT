@@ -1,0 +1,183 @@
+/* ================= REGOLE GENERALI ================= */
+
+/* Il selettore * seleziona TUTTI gli elementi della pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding e bordi nelle dimensioni totali */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Font moderno */
+    line-height: 1.6; /* Spaziatura tra le righe */
+    background-color: #f0f2f5; /* Grigio chiarissimo di sfondo */
+    color: #333; /* Colore testo grigio scuro (più leggibile del nero assoluto) */
+}
+
+/* Classe di utilità per centrare il contenuto e dare margini laterali */
+.container {
+    width: 90%;
+    max-width: 1200px; /* Non si allarga oltre 1200px */
+    margin: 0 auto; /* Centra orizzontalmente */
+}
+
+/* ================= HEADER ================= */
+header {
+   background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color : white;
+    padding: 20px 0;
+    position: sticky; /* Rimane fisso in alto quando scorri */
+    top: 0;
+    z-index: 1000; /* Assicura che stia sopra tutto il resto */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Ombra sotto l'header */
+}
+
+/* Flexbox per allineare logo a sinistra e menu a destra */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 5px 15px;
+}
+
+nav ul {
+    list-style: none; /* Rimuove i pallini della lista */
+    display: flex; /* Mette le voci in orizzontale */
+    gap: 20px; /* Spazio tra le voci */
+}
+
+nav a {
+    text-decoration: none; /* Toglie la sottolineatura */
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s; /* Animazione cambio colore */
+}
+
+nav a:hover {
+    color: #00D4FF ; /* Diventa giallo quando passi il mouse */
+}
+
+/* ================= SEZIONE PROFILO ================= */
+.sezione-profilo {
+    background-color: white;
+    padding: 60px 0;
+}
+
+.profilo-flex {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    gap: 50px;
+    flex-wrap: wrap; /* Se lo schermo è piccolo, manda a capo */
+}
+
+.testo-profilo {
+    flex: 1; /* Prende tutto lo spazio disponibile */
+}
+
+.testo-profilo h1 {
+    font-size: 3rem;
+    color: #090979;
+    margin-bottom: 10px;
+}
+
+.testo-profilo h2 {
+    color: #020024; /* Viola */
+    margin-bottom: 20px;
+}
+
+/* Stile per i badge delle competenze */
+.badge {
+    background-color: #090979; /* Verde acqua */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 10px; /* Bordi arrotondati */
+    font-size: 0.9rem;
+    margin-right: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.foto-profilo {
+    flex: 1;
+    text-align: center;
+}
+
+.foto-profilo img {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 0px #00D4FF; /* Effetto ombra solida gialla */
+}
+.foto-contattami img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 0px #00D4FF; /* Effetto ombra solida gialla */
+}
+
+/* ================= SEZIONE ORARIO ================= */
+.sezione-orario {
+    background-color: #ffff; /* Giallo pastello */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.sezione-orario h3 {
+    font-size: 3rem;
+    color: #090979 ; 
+    margin-bottom: 10px;
+}
+
+/* Contenitore per lo scroll orizzontale su mobile */
+.tabella-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Unisce i bordi delle celle */
+    min-width: 600px; /* Larghezza minima per non schiacciare troppo */
+}
+
+/* Stile intestazione tabella (GIORNI) */
+thead {
+    background-color: #090979; /* Blu scuro */
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd; /* Linea grigia sottile tra le righe */
+}
+
+/* Stile prima colonna (ORE) */
+.ora {
+    font-weight: bold;
+    background-color: #8787FF; /* Arancione chiaro */
+    color: #fff;
+}
+
+/* Effetto Hover sulle righe */
+tbody tr:hover {
+    background-color: #dfe6e9; /* Grigio quando passi il mouse sulla riga */
+    cursor: default;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #020024; /* Grigio scuro quasi nero */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+

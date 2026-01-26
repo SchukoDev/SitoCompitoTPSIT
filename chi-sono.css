@@ -21,6 +21,7 @@ body {
     margin: 0 auto; /* Centra orizzontalmente */
 }
 
+
 /* ================= HEADER ================= */
 header {
    background: #020024;
@@ -32,8 +33,8 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    position: static; /* Rimane fisso in alto quando scorri */
-    top: 20px;
+    position: sticky; /* Rimane fisso in alto quando scorri */
+    top: 0;
     z-index: 1000; /* Assicura che stia sopra tutto il resto */
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Ombra sotto l'header */
 }
@@ -73,6 +74,7 @@ nav a:hover {
 .sezione-profilo {
     background-color: white;
     padding: 60px 0;
+    margin-top: 40px
 }
 
 .profilo-flex {
@@ -83,6 +85,7 @@ nav a:hover {
 }
 
 .testo-profilo {
+    text-align: center;
     flex: 1; /* Prende tutto lo spazio disponibile */
 }
 
@@ -126,59 +129,6 @@ nav a:hover {
     border-radius: 15px;
     box-shadow: 15px 15px 0px #00D4FF; /* Effetto ombra solida gialla */
 }
-
-/* ================= SEZIONE ORARIO ================= */
-.sezione-orario {
-    background-color: #ffff; /* Giallo pastello */
-    padding: 60px 0;
-    text-align: center;
-}
-
-.sezione-orario h3 {
-    font-size: 2rem;
-    color: #090979 ;
-    margin-bottom: 20px;
-}
-
-/* Contenitore per lo scroll orizzontale su mobile */
-.tabella-container {
-    overflow-x: auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse; /* Unisce i bordi delle celle */
-    min-width: 600px; /* Larghezza minima per non schiacciare troppo */
-}
-
-/* Stile intestazione tabella (GIORNI) */
-thead {
-    background-color: #090979; /* Blu scuro */
-    color: white;
-}
-
-th, td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd; /* Linea grigia sottile tra le righe */
-}
-
-/* Stile prima colonna (ORE) */
-.ora {
-    font-weight: bold;
-    background-color: #7D7DFF; /* Arancione chiaro */
-    color: #fff;
-}
-
-/* Effetto Hover sulle righe */
-tbody tr:hover {
-    background-color: #dfe6e9; /* Grigio quando passi il mouse sulla riga */
-    cursor: default;
-}
-
-
 /* ================= FOOTER ================= */
 footer {
     background-color: #020024; /* Grigio scuro quasi nero */
